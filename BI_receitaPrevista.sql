@@ -25,6 +25,7 @@ join receita_contabil_orc    rec  on rec.id_receita_contabil_orc    = prev.recei
 join unidade_orcamentaria uniorc  on uniorc.id_unidade_orcamentaria = prev.unidade_orcamentaria
 join fonte_recurso         fonte  on fonte.id_fonte_recurso         = prf.id_fonte_recurso
 where 1=1
+  and 2=2
   and (prf.valor_fonte > 0 and prf.valor_fonte is not null)
 group by rec.exercicio,
          uniorc.orgao_siof,
